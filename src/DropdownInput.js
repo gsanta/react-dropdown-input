@@ -8,7 +8,6 @@
 
 var React = require('react/addons');
 var ReactBootstrap = require('react-bootstrap');
-var joinClasses = require('react/lib/joinClasses');
 var cx = require('classnames');
 
 var BootstrapMixin = ReactBootstrap.BootstrapMixin;
@@ -114,7 +113,7 @@ var DropdownInput = React.createClass({
         </DropdownMenu>);
     }
     return (
-      <div className={joinClasses(this.props.className, cx(classes))}>
+      <div className={cx(classes)}>
         <Input
           {...this.props}
           menuClassName={null}
